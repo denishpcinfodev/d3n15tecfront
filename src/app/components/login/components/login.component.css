@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+div{
+  border: 0;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  vertical-align: baseline;
+}
+
+form{
+    padding: 10% 10% 10% 10%;
+}
+
+.margin-form-group{
+  margin: 0% 0% 11% 0%;
+}
+
+.color {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+.color-borda {
+    font-family: 'Titillium Web', sans-serif;
+    border:2px solid #000000 !important;
+    cursor: pointer;
+}
+
+.tamanho-fonte{
+    font-family: 'Titillium Web', sans-serif;
+    color: black;
+    font-size:27px;
+    margin: 0% 0% 2% 0%;
+}
+
+.text-centralizado-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -32% 0% 23% -0px;
+  width: 100%;
+}
+
+.font-padrao{
+    font-family: 'Titillium Web', sans-serif;
+    font-size:89px;
+    text-align: center;
+  }
+
+.text-centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -32% 0% 23% 0%;
+    width: 100%;
+}
+
+.h2{
+  font-size: 4rem;
+}
+
+.margin-top{
+  margin: 0% 0% 8% 0%;
+}
+
+.margin-botao{
+  margin: 0% 0% 0% 0%;
+}
+
+.color-alert{
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 31px;
+}
+
+
+
+@media screen and (min-width: 701px){
+
+  .col-lg-5 {
+    flex: 0 0 auto;
+    width: 60%;
+  }
+
+}
+@media screen and (max-width: 991px) and (min-width: 702px) {
+  .col-lg-5 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px){
+
+  .text-centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -50% 0% 23% 0%;
+    width: 100%;
+  }
+
+  form{
+    padding: 0% 10% 10% 10%;
+  }
+
+}

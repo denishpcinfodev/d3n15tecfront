@@ -1,0 +1,39 @@
+
+<div class="restaurant-details">
+
+    <h2>Restaurante: <b>{{nomeRestaurante}}</b></h2>
+    <h4><b>{{descricaoRestaurante}}</b></h4>
+    <div class="food-list">
+        <div class="food-item" *ngFor="let food of cardapioRestaurante let i = index">
+            <div class="food-details">
+                <div class="food-name"><b>Prato: </b>{{ food.itemName}}</div>
+                <div class="food-price"><b>Valor: </b>{{ food.price | currency:'BRL':true:'1.2-2' }}</div>
+                <div *ngIf="food.veg === true" class="food-price"><b>Prato é vegano: </b> Sim </div>
+                <div *ngIf="food.veg === false" class="food-price"><b>Prato é vegano: </b> Não </div>
+                <div class="food-price"><b>Pratos disponíveis: </b>{{ food.quantidadeEstoque }} unidades</div>
+            </div>
+            <div class="food-quantity">
+                <div class="div-qtda-pedido" >
+                    <p><b>Quantidade prato: </b></p>
+                </div>
+                <button mat-raised-button class="minus-button" *ngIf="food.quantidadeEstoque > 0" (click)="decrement(i)" matTooltip="Retirar">
+                    <b> - </b>
+                </button>
+                <div class="quantity-label">{{ food.quantidadePedido }}</div>
+                <button mat-raised-button class="plus-button" (click)="increment(i)" matTooltip="Adicionar">
+                    <b> + </b>
+                </button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="restaurant-header">
+            <button mat-raised-button class="checkout-button" (click)="onCheckOut()" >
+                <i class="fa fa-cart-plus"></i>
+                Comprar
+            </button>
+        </div>
+    </div>
+</div>
